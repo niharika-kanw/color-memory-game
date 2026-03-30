@@ -1,0 +1,7 @@
+{
+  "name": "color-memory-game",
+  "private": true,
+  "scripts": {
+    "vercel-build": "bash scripts/vercel_build_web.sh"
+  }
+}
