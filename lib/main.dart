@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'models/game_state.dart';
 import 'screens/home_screen.dart';
 
@@ -22,11 +21,20 @@ class MyApp extends StatelessWidget {
       scaffoldBackgroundColor: const Color(0xFF0B1120),
     );
 
-    final TextTheme textTheme = GoogleFonts.plusJakartaSansTextTheme(
-      base.textTheme,
-    ).apply(
+    final TextTheme t = base.textTheme.apply(
+      fontFamily: 'Manrope',
       bodyColor: Colors.white,
       displayColor: Colors.white,
+    );
+
+    final TextTheme textTheme = t.copyWith(
+      displayLarge: t.displayLarge?.copyWith(fontFamily: 'Sora', fontWeight: FontWeight.w800),
+      displayMedium: t.displayMedium?.copyWith(fontFamily: 'Sora', fontWeight: FontWeight.w800),
+      displaySmall: t.displaySmall?.copyWith(fontFamily: 'Sora', fontWeight: FontWeight.w800),
+      headlineLarge: t.headlineLarge?.copyWith(fontFamily: 'Sora', fontWeight: FontWeight.w700),
+      headlineMedium: t.headlineMedium?.copyWith(fontFamily: 'Sora', fontWeight: FontWeight.w700),
+      headlineSmall: t.headlineSmall?.copyWith(fontFamily: 'Sora', fontWeight: FontWeight.w700),
+      titleLarge: t.titleLarge?.copyWith(fontFamily: 'Sora', fontWeight: FontWeight.w600),
     );
 
     return MaterialApp(
@@ -37,9 +45,10 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           backgroundColor: const Color(0xFF111827),
           foregroundColor: Colors.white,
-          titleTextStyle: GoogleFonts.plusJakartaSans(
+          titleTextStyle: const TextStyle(
+            fontFamily: 'Sora',
             fontSize: 20,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w700,
             color: Colors.white,
           ),
         ),
@@ -47,9 +56,10 @@ class MyApp extends StatelessWidget {
           style: FilledButton.styleFrom(
             backgroundColor: const Color(0xFF2563EB),
             foregroundColor: Colors.white,
-            textStyle: GoogleFonts.plusJakartaSans(
+            textStyle: const TextStyle(
+              fontFamily: 'Sora',
               fontSize: 17,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
             ),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(14),
@@ -60,9 +70,10 @@ class MyApp extends StatelessWidget {
           style: OutlinedButton.styleFrom(
             foregroundColor: Colors.white,
             side: const BorderSide(color: Colors.white30),
-            textStyle: GoogleFonts.plusJakartaSans(
+            textStyle: const TextStyle(
+              fontFamily: 'Sora',
               fontSize: 16,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
             ),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(14),
@@ -72,9 +83,10 @@ class MyApp extends StatelessWidget {
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             foregroundColor: const Color(0xFF93C5FD),
-            textStyle: GoogleFonts.plusJakartaSans(
+            textStyle: const TextStyle(
+              fontFamily: 'Sora',
               fontSize: 16,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
             ),
           ),
         ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../models/game_state.dart';
 
 class ColorPad extends StatelessWidget {
@@ -55,11 +54,12 @@ class ColorPad extends StatelessWidget {
               child: Center(
                 child: Text(
                   gameColor.label,
-                  style: GoogleFonts.plusJakartaSans(
+                  style: const TextStyle(
+                    fontFamily: 'Sora',
                     fontSize: 22,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w800,
                     color: Colors.white,
-                    letterSpacing: 0.3,
+                    letterSpacing: 0.2,
                   ),
                 ),
               ),
