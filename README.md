@@ -1,3 +1,4 @@
 # color_memory_game
 
-i built this cool game for a fun way to remembering and like workign on ur memory skills..
+I built this game for a fun way working on your memory skills:
+https://color-memory-game-phi.vercel.app/
